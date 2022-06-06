@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { GlobalStyles } from '../constants/styles';
 import ExpensesList from './ExpensesOutput/ExpensesList';
 import ExpensesSummary from './ExpensesOutput/ExpensesSummary';
+
+
 function ExpensesOutput({ expenses, expensesPeriod, fallbackText }) {
   let content = <Text style={styles.infoText}>{fallbackText}</Text>;
 

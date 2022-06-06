@@ -4,18 +4,15 @@ import { GlobalStyles } from '../constants/styles';
 import { getFormattedDate } from '../util/date';
 
 
-
-
-
-function ExpenseItem({ id,description, amount, date }) {
+function ExpenseItem({ id, description, amount, date }) {
   const navigation = useNavigation();
 
   function expensePressHandler() {
- 
     navigation.navigate('ManageExpense', {
       expenseId: id
     });
   }
+
   return (
     <Pressable
       onPress={expensePressHandler}
@@ -35,14 +32,13 @@ function ExpenseItem({ id,description, amount, date }) {
     </Pressable>
   );
 }
-getFormattedDate
+
 export default ExpenseItem;
 
 const styles = StyleSheet.create({
   pressed: {
     opacity: 0.75,
   },
-
   expenseItem: {
     padding: 12,
     marginVertical: 8,
@@ -55,7 +51,6 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.4,
-    
   },
   textBase: {
     color: GlobalStyles.colors.primary50,
@@ -72,7 +67,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 4,
-    minWidth: 80
+    minWidth: 80,
   },
   amount: {
     color: GlobalStyles.colors.primary500,
