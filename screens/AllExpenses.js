@@ -2,6 +2,7 @@ import ExpensesOutput from '../components/ExpensesOutput';
 import { ExpensesContext } from '../store/expenses-context';
 import { useContext } from 'react';
 
+
 function AllExpenses() {
   const expensesCtx = useContext(ExpensesContext);
 
